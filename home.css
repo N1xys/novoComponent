@@ -4,6 +4,7 @@ body{
     display: flex;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 *{
@@ -14,65 +15,3 @@ body{
     
 }
 
-
-
-
-.card-left img{
-
-    border-radius: 200px;
-    width: 30px;
-}
-
-.card{
-
-    width: 720px;
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-
-.card-right img{
-
-    width: 180px;
-    margin: 20px;
-    border-radius: 15px;
-
-}
-
-.card-left >span{
-
-    color: rgb(52, 52, 52);
-    
-}
-
-.card-left > h1{
-
-    margin-top: 15px;
-    font-size: 25px;
-
-}
-
-.card-left{
-
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    flex-direction: column;
-
-}
-
-.card{
-
-   
-    background-color: rgb(253, 249, 242) ;
-    border-radius: 25px;
-
-}
-
-.card-right{
-
-    align-items: center;
-    justify-content: center;
-}

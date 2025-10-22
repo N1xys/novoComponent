@@ -12,6 +12,51 @@
 </head>
 <body>
 
+    <div id="forms-vacancy">
+        <h1>SOLICITAÇÃO DE VAGAS</h1>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <div class="form_group">
+                <label for="nome-completo">Nome completo</label>
+                <input type="text" id="nome-completo" name="nome_completo" required>
+
+            </div>
+            <div class="title-vacancy">
+                <label for="titulo">VAGA</label>
+                <input type="text" id="title-vacancy" name="title_vacancy" required>
+
+            </div>
+            <div class="form-group">
+
+                <label for="departamento">departamento</label>
+                <select name="departamento" id="departamento" required>
+
+                    <option value="">selecione...</option>
+                    <option value="RH">Recursos humanos</option>
+                    <option value="Tecnologia da informação">Tecnologia da informação</option>
+                    <option value="vendas">vendas</option>
+                    <option value="outros">outros</option>
+
+                </select>
+
+            </div>
+
+            <h2>arquivos de referência(opcional)</h2>
+
+            <div class="grid-2">
+
+                <div class="form-group">
+
+                    <label for="foto-perfil">Foto de perfil(para contato)</label>
+                    <input type="file" name="foto_perfil" id="foto-perfil" accept="image/*">
+                    <p>Envie sua foto de perfil máx(1mb)</p>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
     <div class="container">
         <card-News></card-News>
     </div>
