@@ -1,65 +1,55 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo componente</title>
+    <title>Cadastro de Vagas de Emprego</title>
     <link rel="stylesheet" href="home.css">
+    <script src="./src/components/CardNews.js" defer></script>
+    <script src="./src/js/app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="./src/components/CardNews.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <div id="forms-vacancy">
-        <h1>SOLICITAÇÃO DE VAGAS</h1>
-
-        <form action="#" method="POST" enctype="multipart/form-data">
-            
-            <div class="form_group">
-                <label for="nome-completo">Nome completo</label>
-                <input type="text" id="nome-completo" name="nome_completo" required>
-
-            </div>
-            <div class="title-vacancy">
-                <label for="titulo">VAGA</label>
-                <input type="text" id="title-vacancy" name="title_vacancy" required>
-
-            </div>
-            <div class="form-group">
-
-                <label for="departamento">departamento</label>
-                <select name="departamento" id="departamento" required>
-
-                    <option value="">selecione...</option>
-                    <option value="RH">Recursos humanos</option>
-                    <option value="Tecnologia da informação">Tecnologia da informação</option>
-                    <option value="vendas">vendas</option>
-                    <option value="outros">outros</option>
-
-                </select>
-
-            </div>
-
-            <h2>arquivos de referência(opcional)</h2>
-
-            <div class="grid-2">
-
-                <div class="form-group">
-
-                    <label for="foto-perfil">Foto de perfil(para contato)</label>
-                    <input type="file" name="foto_perfil" id="foto-perfil" accept="image/*">
-                    <p>Envie sua foto de perfil máx(1mb)</p>
-
-                </div>
-
-            </div>
-        </form>
-    </div>
     <div class="container">
-        <card-News></card-News>
+        <!-- Formulário de Cadastro -->
+        <form id="job-form" class="job-form">
+            <h2>Cadastrar Nova Vaga</h2>
+
+            
+            <label for="anunciante-nome">Nome do Anunciante:</label>
+            <input type="text" id="anunciante-nome" required placeholder="Nome do Requerente">
+
+            <label for="anunciante-foto">URL da Foto do Anunciante (Perfil):</label>
+            <input type="text" id="anunciante-foto" required placeholder="https://via.placeholder.com/20/FF0000/FFFFFF?text=MV">
+
+            <label for="vaga-titulo">Título da Vaga (H1):</label>
+            <input type="text" id="vaga-titulo" required placeholder="Ex: Desenvolvedor Frontend Sênior">
+
+            <label for="vaga-setor">Setor da Vaga (Span):</label>
+            <input type="text" id="vaga-setor" required placeholder="Ex: Tecnologia / TI">
+
+            <label for="empresa-imagem">URL da Imagem da Empresa (Card):</label>
+            <input type="text" id="empresa-imagem" required value="https://via.placeholder.com/180x180?text=Logo+Empresa">
+
+            <label for="vaga-descricao">Descrição da Vaga (Parágrafo):</label>
+
+            <textarea id="vaga-descricao" rows="5" required placeholder="Detalhes da vaga, requisitos e benefícios..."></textarea>
+
+            <button type="submit">Publicar Vaga</button>
+        </form>
+
+        <!-- Lista de Vagas -->
+        <div class="job-list" id="job-list">
+            <!-- As vagas serão inseridas aqui pelo JavaScript -->
+        </div>
+        
     </div>
-    
 </body>
+
 </html>
