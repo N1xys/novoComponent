@@ -1,56 +1,85 @@
-body{
+body {
     background-color: blueviolet;
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 100vh;
-    
-}
-
-*{
     margin: 0;
-    padding: 0%;
-    font-family: roboto;
-    box-sizing: border-box;
-    
+    padding-top: 40px; /* Adicionado padding para não cortar no topo */
+    padding-bottom: 40px; /* Adicionado padding para o scroll */
+    min-height: 100vh; /* Garante altura mínima */
+    height: auto; /* Permite o body crescer */
+    flex-direction: column;
 }
 
-#job-form{
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nota: Os estilos do ".card" estão no CardNews.js (Shadow DOM) */
+
+
+/* Estilos para o formulário e a lista de vagas */
+.job-form {
     background-color: white;
-    width: 800px;
-    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 750px;
+}
 
+.job-form h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.job-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.job-form input[type="text"],
+.job-form textarea,
+.job-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.job-form button {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.job-form button:hover {
+    background-color: #581d85;
+}
+
+.job-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    row-gap: 10px;
-    
-
 }
 
-#job-form label{
-
-    font-family: advent pro;
-    color: black;
-
-}
-
-#job-form button{
-
-    color: white;
-    background-color: blueviolet;
-    border: 0;
-    margin-bottom: 20px;
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-
-}
-
-#job-form textarea{
-
-    width: 300px;
-
+.job-list card-news {
+    margin-bottom: 10px;
 }

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Vagas de Emprego</title>
+    <!-- Link para o CSS global -->
     <link rel="stylesheet" href="home.css">
-    <script src="./src/components/CardNews.js" defer></script>
-    <script src="./src/js/app.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Scripts (defer garante que só executem após o HTML carregar) -->
+    <!-- Define o Web Component <card-news> -->
+    <script src="src/components/CardNews.js" defer></script>
+    <!-- Contém a lógica principal (CRUD) -->
+    <script src="src/js/app.js" defer></script>
 </head>
 
 <body>
@@ -20,26 +21,34 @@
         <!-- Formulário de Cadastro -->
         <form id="job-form" class="job-form">
             <h2>Cadastrar Nova Vaga</h2>
-
             
             <label for="anunciante-nome">Nome do Anunciante:</label>
-            <input type="text" id="anunciante-nome" required placeholder="Nome do Requerente">
+            <input type="text" id="anunciante-nome" required 
+                   placeholder="Nome do Requerente">
 
-            <label for="anunciante-foto">URL da Foto do Anunciante (Perfil):</label>
-            <input type="text" id="anunciante-foto" required placeholder="https://via.placeholder.com/20/FF0000/FFFFFF?text=MV">
+            <label for="anunciante-foto">
+                URL da Foto do Anunciante (Perfil):</label>
+            <input type="text" id="anunciante-foto" 
+                   required placeholder="https://seulinkaqui.com">
 
             <label for="vaga-titulo">Título da Vaga (H1):</label>
-            <input type="text" id="vaga-titulo" required placeholder="Ex: Desenvolvedor Frontend Sênior">
+            <input type="text" id="vaga-titulo" 
+                   required placeholder="Ex: Desenvolvedor Frontend Sênior">
 
             <label for="vaga-setor">Setor da Vaga (Span):</label>
-            <input type="text" id="vaga-setor" required placeholder="Ex: Tecnologia / TI">
+            <input type="text" id="vaga-setor" 
+                   required placeholder="Ex: Tecnologia / TI">
 
-            <label for="empresa-imagem">URL da Imagem da Empresa (Card):</label>
-            <input type="text" id="empresa-imagem" required value="https://via.placeholder.com/180x180?text=Logo+Empresa">
+            <label for="empresa-imagem">
+                URL da Imagem da Empresa (Card):</label>
+            <input type="text" id="empresa-imagem" 
+                   required placeholder="https://linkDaSuaImagemAqui.com">
 
-            <label for="vaga-descricao">Descrição da Vaga (Parágrafo):</label>
-
-            <textarea id="vaga-descricao" rows="5" required placeholder="Detalhes da vaga, requisitos e benefícios..."></textarea>
+            <label for="vaga-descricao">
+                Descrição da Vaga (Parágrafo):</label>
+            <textarea id="vaga-descricao" rows="5" 
+                   required placeholder="Detalhes da vaga, requisitos e benefícios...">
+            </textarea>
 
             <button type="submit">Publicar Vaga</button>
         </form>
